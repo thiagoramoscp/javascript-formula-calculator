@@ -1,0 +1,119 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html, body {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  background-image: linear-gradient(0deg, #EEF, #FFF);
+  font-size: 1.3rem;
+  font-family: 'Gafata', 'Cuprum', 'Chakra Petch', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  padding: 5px;
+  background-color: #022144;
+  box-shadow: 5px 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.visor {
+  height: 80px;
+  width: 246px;
+  font-family: "Times New Roman", Times, serif;
+}
+.visor .formulaScreen {
+  height: 45%;
+  border-bottom: 1px solid #BBB;
+  padding: 3px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.visor .formulaScreen::-webkit-scrollbar {
+  display: none;
+}
+.visor .formulaScreen span {
+  color: #FFF;
+  float: right;
+  flex: 0 0 auto;
+}
+.visor .outputScreen {
+  height: 55%;
+  padding: 3px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+.visor .outputScreen::-webkit-scrollbar {
+  display: none;
+}
+.visor .outputScreen span {
+  color: #FFF;
+  float: left;
+}
+
+.btnsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-auto-rows: 60px;
+  grid-gap: 2px;
+}
+
+.btns {
+  border: none;
+  background-color: #82929F;
+  font-size: .8rem;
+  font-family: 'Gafata', sans-serif;
+  color: white;
+}
+
+.operator {
+  background-color: #5D7A91;
+}
+
+#clear {
+  grid-column: 1 / 3;
+  background-color: #AE7C3A;
+}
+
+#zero {
+  grid-column: 1 / 3;
+}
+
+#equals {
+  grid-row: 4 / 6;
+  grid-column: 4 / 5;
+  background-color: #17496F;
+}
+
+.footer-text {
+  font-size: 0.85rem;
+  font-family: 'Cuprum', sans-serif;
+  text-align: center;
+  margin-bottom: .3rem;
+}
+
+.name {
+  color: yellow;
+  font-family: 'Cuprum', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.3rem;
+}
+.name a {
+  text-decoration: none;
+  color: #022144;
+}
+.name a:hover {
+  color: #AE7C3A;
+}
